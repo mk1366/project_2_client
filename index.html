@@ -1,17 +1,109 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+
+<img id= "fitness" src= "./assets/styles/png/fitness.png"/>
+  <h1>Theory Fitness</h1>
+  <h3 id="message"></h3>
+  <!-- <h1>Browser Template</h1> -->
+  <p>Please fill in this form to make an appointment with the Appointments</p>
+</body>
+<div class="sign-up-container">
+  <form id='sign-up'>
+    <h1>sign-up</h1>
+    <input type="email" name="credentials[email]" placeholder='Enter email..'>
+    <input type="password" name="credentials[password]" placeholder='password'>
+    <input type="password" name="credentials[password_confirmation]" placeholder='Enter password agian'>
+    <button>sign up</button>
+  </form>
+</div>
+<div class="sign-in-container">
+  <form id='sign-in'>
+    <h1>sign-in</h1>
+    <input type="email" name="credentials[email]" placeholder='Enter email..'>
+    <input type="password" name="credentials[password]" placeholder='password'>
+    <button>sign in</button>
+  </form>
+</div>
+
+<div class="change-password-container"
+  <form id='change-password'>
+    <h1>change password</h1>
+    <input type="password" name="passwords[old]" placeholder='Enter old password'>
+    <input type="password" name="passwords[new]" placeholder='Enter new password'>
+    <input type="submit" class="btn btn-info" value="Submit">
+  </form>
+</div>
+
+<div class="sign-out-container"
+  <form id='sign-out'>
+    <h1>sign-out</h1>
+    <button class="btn btn-primary">sign-out</button>
+  </div>
+
+  </form>
+
+  <div Class="response"></div>
+  <h2> Create your Appointment</h2>
+  <form id='name' class="hidden">
+    <label for="full_name">Full Name</label>
+    <input type="name" name="appointment[name]" placeholder="full name">
+  </form>
+
+  <form id='create_Appointment' class="hidden">
+    <label for="gym">Gym</label>
+    <input type="gym" name="appointment[gym]" placeholder='gym'>
+    <label for="location">Location</label>
+    <input type="location" name="appointment[location]" placeholder='location'>
+    <label for="Trainer_name">Trainer_Name</label>
+    <input type="Appointment_name" name="appointment[Trainer]" placeholder='Appointment_name'>
+    <label for="inputNum3"> Date </label>
+    <input type="date" min="1" class="form-control form-control-sm" name="appointment[starts_on]" required>
+    <button class="btn-create">create Appointment</button>
+  </form>
+
+
+  <form id="show-Appointment" class="hidden">
+    <button type="submit" class="show-Appointments">Show All Appointments</button>
+    <div class="Appointments-history"></div>
+  </form>
+
+
+  <form id='update_Appointment' class="hidden">
+    <input name="appointment[id]" type="text" placeholder="Appointment ID">
+    <label for="gym">Gym</label>
+    <input type="gym" name="appointment[gym]" placeholder='gym'>
+    <label for="location">Location</label>
+    <input type="location" name="appointment[location]" placeholder='location'>
+    <label for="Trainer_name">Trainer_Name</label>
+    <input type="Trauner_name" name="appointment[trainer]" placeholder='Trainer'>
+    <label for="inputNum3"> Date </label>
+    <input type="date" min="1" class="form-control form-control-sm" name="appointment[starts_on]" required>
+    <button class="btn-create">update Appointment</button>
+  </form>
+
+  <form id="delete-Appointments" class="hidden">
+    <input name="Appointment[id]" type="text" placeholder="Appointment ID">
+    <button type="submit" class="btn-create">Delete Appointments</button>
+  </form>
+  </div>
+  </div>
+  </div>
+</form>
+
+</body>
+
 </html>
