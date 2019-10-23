@@ -42,7 +42,9 @@ const onUpdateAppointments = function (event) {
 
 const onDeleteAppointments = (event) => {
   event.preventDefault()
-  const id = $(event.target).data('id')
+  // console.log($('#remove').val())
+  // const id = $('#remove').data('id')
+  const id = $('#remove').val()
   api.deleteAppointment(id)
     .then(ui.getDeleteSuccess)
     .then(() => onGetAppointments(event))

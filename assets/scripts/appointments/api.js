@@ -15,10 +15,10 @@ const getAppointments = function () {
   })
 }
 
-const getAppointment = function(id) {
+const getAppointment = function (id) {
   return $.ajax({
     method: 'GET',
-    url: config.apiUrl + '/appointments/${id}',
+    url: config.apiUrl + `/appointments/${id}`,
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
@@ -40,7 +40,6 @@ const createAppointments = function (AppointmentData) {
 // function that takes threee arguments, an array with
 // index(to hold the place of each element) and the
 
-
 const updateAppointment = function (data) {
   return $.ajax({
     url: config.apiUrl + `/appointments/${data.appointment.id}`,
@@ -52,8 +51,7 @@ const updateAppointment = function (data) {
   })
 }
 
-
-const deleteAppointments = function (id) {
+const deleteAppointment = function (id) {
   return $.ajax({
     url: config.apiUrl + `/appointments/${id}`,
     method: 'DELETE',
@@ -68,5 +66,5 @@ module.exports = {
   getAppointment,
   createAppointments,
   updateAppointment,
-  deleteAppointments
+  deleteAppointment
 }

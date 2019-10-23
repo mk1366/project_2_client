@@ -18,13 +18,13 @@
   <img id="fitness" src="./assets/styles/png/fitness.png" />
   <h1>Theory Fitness</h1>
   <h3 id="message"></h3>
-  <!-- <h1>Browser Template</h1> -->
+
   <p>Please fill in this form to make an appointment with the Trainer</p>
 </body>
 
 <div class="sign-up-container">
-    <form id='sign-up' class="hidden">
-      <label for="sign-up">sign-up</label>
+  <form id='sign-up' class="hidden">
+    <label for="sign-up">sign-up</label>
     <input type="email" name="credentials[email]" placeholder='Enter email..'>
     <input type="password" name="credentials[password]" placeholder='password'>
     <input type="password" name="credentials[password_confirmation]" placeholder='Enter password agian'>
@@ -32,8 +32,8 @@
   </form>
 </div>
 <div class="sign-in-container">
-      <form id='sign-in' class="hidden">
-        <label for="sign-in">sign-in</label>
+  <form id='sign-in' class="hidden">
+    <label for="sign-in">sign-in</label>
     <input type="email" name="credentials[email]" placeholder='Enter email..'>
     <input type="password" name="credentials[password]" placeholder='password'>
     <button>sign in</button>
@@ -83,7 +83,7 @@
 </form>
 
 <form id="delete-Appointment" class="hidden">
-  <input name="Appointment[id]" type="text" placeholder="Appointment ID">
+  <input id="remove" name="Appointment[id]" type="text" placeholder="Appointment ID">
   <button type="submit" class="btn-create">Delete Appointments</button>
 </form>
 
@@ -93,11 +93,11 @@
   <input type="password" name="passwords[new]" placeholder='Enter new password'>
   <button class="btn-change_password">change password</button>
 
-  </form>
-  <div class="sign-out-container">
-    <form id='sign-out' class="hidden">
-      <label for="sign-up">sign-out</label>
-      <button class="btn-sign-out">sign out</button>
+</form>
+<div class="sign-out-container">
+  <form id='sign-out' class="hidden">
+    <!-- <label for="sign-up">sign-out</label> -->
+    <button class="btn-sign-out">sign out</button>
 
 </div>
 
