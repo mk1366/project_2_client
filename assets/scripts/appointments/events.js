@@ -11,7 +11,6 @@ const onGetAppointments = function (event) {
     .catch(ui.failure)
 }
 const onCreateAppointments = function (event) {
-  console.log('Hello')
   event.preventDefault()
   const data = getFormFields(event.target)
   console.log(data)

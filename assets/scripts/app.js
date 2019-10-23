@@ -9,13 +9,17 @@
 const authEvents = require('./auth/events')
 const appointmentsevents = require('./appointments/events')
 
-// const gameEvent = require('./game/gameEvent')
-
 $(() => {
   // when the page starts, hide these
   // $('.signout').hide()
+
+  $('#create_Appointment').hide()
+  $('#update_Appointment').hide()
+  $('#show-Appointment').hide()
+  $('#delete-Appointment').hide()
+  $('#change_password').hide()
   $('#sign-out').hide()
-  $('#change-password').hide()
+  $('#myHeader').hide()
 
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
@@ -24,5 +28,5 @@ $(() => {
   $('#create_Appointment').on('submit', appointmentsevents.onCreateAppointments)
   $('#update_Appointment').on('submit', appointmentsevents.onUpdateAppointments)
   $('#show-Appointment').on('submit', appointmentsevents.onGetAppointments)
-
+  $('#delete-Appointment').on('submit', appointmentsevents.onDeleteAppointments)
 })

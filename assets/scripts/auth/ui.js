@@ -31,6 +31,15 @@ const onSignInSuccess = function (responseData) {
   $('#change-password').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
+  $('#change-password').show()
+  $('#create_Appointment').show()
+  $('#update_Appointment').show()
+  $('#show-Appointment').show()
+  $('#delete-Appointment').show()
+  $('#change_password').show()
+  $('#sign-out').show()
+  $('#myHeader').show()
+
   // save the 'user' we got from the API inside of 'store'
   // so we can use it later, from any file
   store.user = responseData.user

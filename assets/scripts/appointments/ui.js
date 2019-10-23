@@ -2,7 +2,7 @@
 const store = require('../store')
 // const showAppointments = require('../templates/app.js)
 
-const successMessage = function (newText)  {
+const successMessage = function (newText) {
   $('#message').text(newText)
   $('message').removeClass('failure')
   $('#message').addClass('sucess')
@@ -20,49 +20,41 @@ const onCreateAppointments = function (data) {
   console.log('Hello')
 }
 
-const onGetAppointmentsSuccess = function (data) {
+const onUpdateAppointments = function (data) {
   successMessage('success')
-  console.log('data.appointments')
+  $('#update_Appointment').text('')
+  console.log('success')
 }
 
-// const onGetAppointments = function (data) {
-//   $('#show-Appointment').text('')
-//   if (data.appointments.length === 0) {
-//     $('#view-all-appointments-message').text('No appointment. Add appointment!')
-//     $('#view-all-appointments-message').addClass('failure')
-//     $('#view-all-stocks-message').append('<p></p>')
-//     setTimeout(function () {
-//       $('#view-all-appointments-message').text('')
-//     }, 5000)
-//   } else {
-//     data.appointments.forEach(appointment => {
-//       $('#view-all-appointments-message').removeCass('failure')
-//       $('#view-all-appointments-message').append('<p>name:' + appointment.name + '</p>')
-//       $('#view-all-appointments-message').append('<p>ID: ' + appointment.id + '</p>')
-//       $('#view-all-appointments-message').append('<p>trainer: ' + appointment.trainer + '</p>')
-//       $('#view-all-appointments-message').append('<p>location: ' + appointment.location + '</p>')
-//       $('#view-all-appointments-message').append('<p>gym: ' + appointment.gym + '</p>')
-//       $('#view-all-appointments-message').append('<p>starts_on: ' + appointment.starts_on + '</p>')
-//    })
-// }
-// }
+const onDeleteAppointments = function (data) {
+  successMessage('success')
+  $('#delete-Appointment').text('')
+  console.log('delete')
+}
 
-// const onDeleteAppointments = function(data)
+const onGetAppointmentsSuccess = function (data) {
+  $('.Appointments-history').html('')
 
-// $('.CreateAlert').text('Successful')
-//
-//  $('.CreateUpdate').text('Created')
-//
-//   $('.CreateUpdate').text('Updated')
-//
-// $('.CreateUpdate').text('Deleted')
-//
-//  $('.CreateUpdate').text('Cleared')
+  data.appointments.forEach(appointment => {
+    const appointmentsHTML = (`
+   <p>name:${appointment.name}</p>
+   <p>trainer:${appointment.trainer}</p>
+   <p>gym:${appointment.gym}</p>
+   <p>location:${appointment.location}</p>
+   <p>date:${appointment.starts_on}</p>
+   <p>id:${appointment.id}</p>
+   <br>
+   `)
+    $('.Appointments-history').append(appointmentsHTML)
+  })
+}
 
 module.exports = {
   failureMessage,
   successMessage,
   onCreateAppointments,
-  onGetAppointmentsSuccess
-  // onGetAppointments
+  onGetAppointmentsSuccess,
+  onUpdateAppointments,
+  onDeleteAppointments
+
 }
