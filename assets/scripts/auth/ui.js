@@ -73,7 +73,7 @@ const onSignoutSuccess = function () {
 
 const onSignoutFailure = function () {
   failureMessage('Sign out failed')
-$('#sign-out').trigger('reset')
+  $('#sign-out').trigger('reset')
 }
 module.exports = {
   onSignUpSuccess,

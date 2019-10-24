@@ -23,7 +23,7 @@ $(() => {
 
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
-  $('#change-password').on('submit', authEvents.onchangepassword)
+  $('#change_password').on('submit', authEvents.onchangepassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('#create_Appointment').on('submit', appointmentsevents.onCreateAppointments)
   $('#update_Appointment').on('submit', appointmentsevents.onUpdateAppointments)
