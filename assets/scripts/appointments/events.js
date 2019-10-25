@@ -51,16 +51,25 @@ const onDeleteAppointments = (event) => {
     .catch(ui.failure)
 }
 
-const onClearAppointments = (event) => {
-  event.preventDefault()
-  ui.clearAppointments()
-}
+// const onSelectAppointments = (event) =>
+//   event.preventDefault()
+// const id = $('#slect').val()
+// api.selectAppointment(id)
+//   .then(ui.selectAppointment)
+//   .then(() => onSelectAppointments(event))
+//   .catch(ui.failure)
+
+// const onClearAppointments = (event) => {
+//   event.preventDefault()
+//   ui.clearAppointments()
+// }
 
 module.exports = {
   onGetAppointments,
   onGetAppointment,
   onDeleteAppointments,
   onUpdateAppointments,
-  onCreateAppointments,
-  onClearAppointments
+  onCreateAppointments
+  // onClearAppointments,
+  // onSelectAppointments
 }

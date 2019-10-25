@@ -21,8 +21,13 @@
 
 
 </body>
-
-<div class="sign-up-container">
+<!-- <nav class="navbar navbar-default"> -->
+<!-- <div class="navbar-header"> -->
+<!-- <div class="sign-up-container"> -->
+  <!-- <a class="navbar-brand" href="#">FINDTRAINERS</a> -->
+<!-- </div> -->
+<!-- <ul class="nav navbar-nav"> -->
+<!-- <li class="active"><a href="#">Home(about)</a></li> -->
   <form id='sign-up' class="hidden">
     <label for="sign-up">sign-up</label>
     <input type="email" name="credentials[email]" placeholder='Enter email..'>
@@ -30,7 +35,7 @@
     <input type="password" name="credentials[password_confirmation]" placeholder='Enter password agian'>
     <button>sign up</button>
   </form>
-</div>
+
 <div class="sign-in-container">
   <form id='sign-in' class="hidden">
     <label for="sign-in">sign-in</label>
@@ -42,27 +47,51 @@
 
 <!-- <h1 id="myHeader">Find your Trainer!</h1> -->
 
-
 </form>
 
-<div Class="response"></div>
-<form id='create_Appointment' class="hidden">
-  <label for="full_name">Full Name</label>
-  <input type="name" name="appointment[name]" placeholder="full name">
-  <label for="gym">Gym</label>
-  <input type="gym" name="appointment[gym]" placeholder='gym'>
-  <label for="location">Location</label>
-  <input type="location" name="appointment[location]" placeholder='location'>
-  <label for="Trainer_name">Trainer_Name</label>
-  <input type="Appointment_name" name="appointment[trainer]" placeholder='trainer'>
-  <label for="inputNum3"> Date </label>
-  <input type="date" min="1" class="form-control form-control-sm" name="appointment[starts_on]" required>
-  <button class="btn-create">create Appointment</button>
-</form>
+<!-- Button trigger modal -->
+<button type="button" id="create-modal" class="btn btn-primary btn-create" data-toggle="modal" data-target="#exampleModalCenter">
+  Create Appointment
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Create Appointment</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="response"></div>
+        <form id='create_Appointment' class="hidden">
+          <label for="full_name">Full Name</label>
+          <input type="name" name="appointment[name]" placeholder="full name">
+          <label for="gym">Gym</label>
+          <input type="gym" name="appointment[gym]" placeholder='gym'>
+          <label for="location">Location</label>
+          <input type="location" name="appointment[location]" placeholder='location'>
+          <label for="Trainer_name">Trainer_Name</label>
+          <input type="Appointment_name" name="appointment[trainer]" placeholder='trainer'>
+          <label for="inputNum3"> Date </label>
+          <input type="date" min="2019-10-01" class="form-control form-control-sm" name="appointment[starts_on]" required>
+          <input class="btn btn-primary btn-create" type="submit" value="Create Appointment">
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button id="create_button" type="button" class="btn btn-primary">Create Appointment</button> -->
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <form id="show-Appointment" class="hidden">
-  <button type="submit" class="show-Appointments">Show_Appointments</button>
+  <button type="submit" class="show-Appointments">Show Appointments</button>
   <div class="Appointments-history"></div>
 </form>
 
@@ -82,26 +111,36 @@
   <button class="btn-create">update Appointment</button>
 </form>
 
+<!-- <form id="select_Appointment" class="hidden">
+  <input id="slect" name="Appointment[id]" type="text" placeholder="Appointment ID">
+  <button type="submit" class="select_Appointment">Select by ID</button>
+</form> -->
+
 <form id="delete-Appointment" class="hidden">
   <input id="remove" name="Appointment[id]" type="text" placeholder="Appointment ID">
   <button type="submit" class="btn-create">Delete Appointments</button>
 </form>
+
+
+<!-- <form id="clear_Appointment" class="hidden">
+  <input id="clear" name="Appointments" type="text" placeholder="Appointments">
+  <button type="submit" class="btn-create">Clear Appointments</button>
+</form> -->
+
 
 <form id='change_password' class="hidden">
   <label for="change_password">Change password</label>
   <input type="password" name="passwords[old]" placeholder='Enter old password'>
   <input type="password" name="passwords[new]" placeholder='Enter new password'>
   <button class="btn-change_password">change password</button>
-
 </form>
+
 <div class="sign-out-container">
   <form id='sign-out' class="hidden">
     <!-- <label for="sign-up">sign-out</label> -->
     <button class="btn-sign-out">sign out</button>
   </form>
 </div>
-
-
 
 
 </body>

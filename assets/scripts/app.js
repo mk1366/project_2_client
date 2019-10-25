@@ -13,13 +13,15 @@ $(() => {
   // when the page starts, hide these
   // $('.signout').hide()
 
-  $('#create_Appointment').hide()
+  $('.create_button').hide()
   $('#update_Appointment').hide()
   $('#show-Appointment').hide()
   $('#delete-Appointment').hide()
   $('#change_password').hide()
   $('#sign-out').hide()
   $('#myHeader').hide()
+  // $('#select_Appointment').hide()
+  // $('#clear_Appointment').hide()
 
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
@@ -28,5 +30,7 @@ $(() => {
   $('#create_Appointment').on('submit', appointmentsevents.onCreateAppointments)
   $('#update_Appointment').on('submit', appointmentsevents.onUpdateAppointments)
   $('#show-Appointment').on('submit', appointmentsevents.onGetAppointments)
+  // $('#select_Appointment').on('submit', appointmentsevents.onSelectAppointments)
+  // $('#clear_Appointments').on('submit', appointmentsevents.onClearAppointments)
   $('#delete-Appointment').on('submit', appointmentsevents.onDeleteAppointments)
 })

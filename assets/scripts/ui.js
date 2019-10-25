@@ -26,22 +26,11 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (responseData) {
   successMessage('signed in successfully!')
   console.log('responseData is', responseData)
-  // $('.game').show()
+  $('.game').show()
   $('#sign-out').show()
   $('#change-password').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
-  $('#change-password').show()
-  $('.btn-create').show()
-  $('#update_Appointment').show()
-  $('#show-Appointment').show()
-  $('#delete-Appointment').show()
-  $('#change_password').show()
-  $('#sign-out').show()
-  $('#myHeader').show()
-  // $('#select_Appointment').show()
-  // $('#clear_Appointment').show()
-
   // save the 'user' we got from the API inside of 'store'
   // so we can use it later, from any file
   store.user = responseData.user
@@ -66,7 +55,7 @@ const onchangepasswordFailure = function () {
 const onSignoutSuccess = function () {
   successMessage('Signed out successfully!')
   $('#Signed out').trigger('reset')
-  // $('.game').hide()
+  $('.game').hide()
   $('#sign-out').hide()
   $('#change-password').hide()
   $('#sign-up').show()
@@ -75,7 +64,7 @@ const onSignoutSuccess = function () {
 
 const onSignoutFailure = function () {
   failureMessage('Sign out failed')
-  $('#sign-out').trigger('reset')
+$('#sign-out').trigger('reset')
 }
 module.exports = {
   onSignUpSuccess,

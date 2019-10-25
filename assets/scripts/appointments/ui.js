@@ -15,8 +15,9 @@ const failureMessage = function (newText) {
 }
 
 const onCreateAppointments = function (data) {
-  successMessage('success')
+  successMessage('Created')
   $('#create_Appointment').text('')
+  $('#create-modal').modal('hide')
   console.log('Hello')
 }
 
@@ -31,6 +32,20 @@ const onDeleteAppointments = function (data) {
   $('#delete-Appointment').text('')
   console.log('delete')
 }
+
+// const onSelectAppointments = function (data) {
+//   successMessage('success')
+//   $('#select_Appointment').text('')
+//   console.log('slect')
+// }
+
+// const onClearAppointments = () => {
+//   $('#clear_Appointment').empty()
+//   setTimeout(function () {
+//     $('#clear_Appointment').text('')
+//   }, 3000)
+//   $('.CreateUpdate').text('Cleared')
+// }
 
 const onGetAppointmentsSuccess = function (data) {
   $('.Appointments-history').html('')
@@ -56,5 +71,7 @@ module.exports = {
   onGetAppointmentsSuccess,
   onUpdateAppointments,
   onDeleteAppointments
+  // onSelectAppointments,
+  // onClearAppointments
 
 }
