@@ -1,0 +1,11 @@
+{{#each appointments as |appointment|}}
+  {{log appointment}}
+  <section class= appt-display>
+  <h4>Appointment {{appointment.id}} </h4>
+      <p>Gym:{{appointment.gym}}</p>
+      <p>Location:{{appointment.location}}</p>
+      <p>Date:{{appointment.starts_on}}</p>
+      <p>Trainer:{{appointment.trainer}}
+  </section>
+
+{{/each}}

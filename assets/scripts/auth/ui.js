@@ -5,6 +5,9 @@ const successMessage = function (newText) {
   $('#message').text(newText)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+  $('.modal-backdrop').hide()
+  $('form').trigger('reset')
+
 }
 
 const failureMessage = function (newText) {
@@ -15,68 +18,66 @@ const failureMessage = function (newText) {
 
 const onSignUpSuccess = function () {
   successMessage('signed up successfully!')
-  $('#sign-up').trigger('reset')
+
 }
 
 const onSignUpFailure = function () {
   failureMessage('Sign up failed')
-  $('#sign-up').trigger('reset')
+  // $('#sign-up-model').trigger('reset')
 }
-// contains user object
+
+
 const onSignInSuccess = function (responseData) {
   successMessage('signed in successfully!')
-  console.log('responseData is', responseData)
-  // $('.game').show()
-  $('#sign-out').show()
-  $('#change-password').show()
-  $('#sign-up').hide()
-  $('#sign-in').hide()
-  $('#change-password').show()
-  $('.btn-create').show()
-  $('#update_Appointment').show()
-  $('#show-Appointment').show()
-  $('#delete-Appointment').show()
-  $('#change_password').show()
-  $('#sign-out').show()
-  $('#myHeader').show()
-  // $('#select_Appointment').show()
-  // $('#clear_Appointment').show()
 
-  // save the 'user' we got from the API inside of 'store'
-  // so we can use it later, from any file
   store.user = responseData.user
-  console.log('store is', store)
-  $('#sign-in').trigger('reset')
+  $('#create_appointment_label').show()
+  $('#update_Appointment').show()
+  $('#Appointments-history').show()
+   $('#delete_appointment_label').show()
+  $('#change_password_label').show()
+   $('.sign-out').show()
+
 }
+
+
+//   store.user = responseData.user
+//   console.log('store is', store)
+//   $('#sign-in-modal').trigger('reset')
+
 
 const onSignInFailure = function () {
   failureMessage('Sign in failed')
-  $('#sign-in').trigger('reset')
+  // $('#sign-in').trigger('reset')
 }
 
 const onchangepasswordSuccess = function () {
-  successMessage('Changepassword successfully!')
-  $('#change-password').trigger('reset')
+  successMessage('Password updated!')
+  $('#message').show()
+  $('#change_password-modal').trigger('reset')
 }
 
 const onchangepasswordFailure = function () {
   failureMessage('Changepassword failed')
-  $('#change-password').trigger('reset')
+  $('#message').show()
+  $('#change_password').trigger('reset')
 }
-const onSignoutSuccess = function () {
+const onSignOutSuccess = function () {
+  console.log('sign out')
   successMessage('Signed out successfully!')
-  $('#Signed out').trigger('reset')
-  // $('.game').hide()
+
   $('#sign-out').hide()
-  $('#change-password').hide()
+  $('#change_password').hide()
   $('#sign-up').show()
-  $('#sign-in').show()
+  $('#sign-in-modal').show()
+  $('#display_appointments').html('')
 }
 
-const onSignoutFailure = function () {
+const onSignOutFailure = function () {
   failureMessage('Sign out failed')
   $('#sign-out').trigger('reset')
 }
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
@@ -84,6 +85,6 @@ module.exports = {
   onSignInFailure,
   onchangepasswordSuccess,
   onchangepasswordFailure,
-  onSignoutSuccess,
-  onSignoutFailure
+  onSignOutSuccess,
+  onSignOutFailure
 }
