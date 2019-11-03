@@ -24,8 +24,6 @@ const createAppointments = function (formData) {
   })
 }
 
-
-
 const updateAppointment = function (data) {
   return $.ajax({
     url: config.apiUrl + `/appointments/${data.appointment.id}`,
@@ -70,9 +68,8 @@ const deleteAppointment = function (id) {
 
 module.exports = {
   getAppointments,
-  // selectAppointment,
   createAppointments,
   updateAppointment,
   deleteAppointment
-  // /clearAppointments
+
 }

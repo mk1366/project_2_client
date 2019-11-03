@@ -67,10 +67,12 @@ const onSignOutSuccess = function () {
   $('#create_appointment_label').hide()
   $('#update_Appointment').hide()
   $('#Appointments-history').hide()
-   $('#delete_appointment_label').hide()
+  $('#delete_appointment_label').hide()
   $('#change_password_label').hide()
-   $('.sign-out').hide()
+  $('.sign-out').hide()
   $('#display_appointments').html('')
+  $('#sign-up-label').show()
+  $('#sign-in-label').show()
 }
 
 const onSignOutFailure = function () {

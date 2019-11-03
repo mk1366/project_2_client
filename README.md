@@ -36,14 +36,18 @@ Technologies Used
 
 Link to deployed front end application(Appointments-Client)
 
+https://github.com/mk1366/project_2_client
+
 GitHub link to front end repositary:
 
 
 Link to deployed back end application(Appointments-Api)
+
+https://github.com/mk1366/project_2_api
 
 
 GitHub link for the back end repositary
 
 Wire Frame Link
 
-https://maheletkassa.imgur.com/all
+https://i.imgur.com/aCOGtSE.png
