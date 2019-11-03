@@ -37,13 +37,10 @@ const onSignInSuccess = function (responseData) {
    $('#delete_appointment_label').show()
   $('#change_password_label').show()
    $('.sign-out').show()
+   $('#sign-up-label').hide()
+   $('#sign-in-label').hide()
 
 }
-
-
-//   store.user = responseData.user
-//   console.log('store is', store)
-//   $('#sign-in-modal').trigger('reset')
 
 
 const onSignInFailure = function () {
@@ -66,10 +63,13 @@ const onSignOutSuccess = function () {
   console.log('sign out')
   successMessage('Signed out successfully!')
 
-  $('#sign-out').hide()
-  $('#change_password').hide()
-  $('#sign-up').show()
-  $('#sign-in-modal').show()
+
+  $('#create_appointment_label').hide()
+  $('#update_Appointment').hide()
+  $('#Appointments-history').hide()
+   $('#delete_appointment_label').hide()
+  $('#change_password_label').hide()
+   $('.sign-out').hide()
   $('#display_appointments').html('')
 }
 

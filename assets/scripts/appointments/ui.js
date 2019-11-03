@@ -22,7 +22,7 @@ const getCreateSuccess = function (data) {
   successMessage('Created')
   $('#create_Appointment').text('')
   $('#create_Appointment').modal('hide')
-  console.log('Hello')
+
 }
 
 
@@ -36,7 +36,7 @@ const getCreateFailure = function (data) {
 const getUpdateSuccess = function (data) {
   successMessage('success')
   $('#update_Appointment_form').text('')
-  console.log('success')
+
 }
 const getUpdateFailure = function (data) {
   failureMessage('Not Updated')
@@ -48,7 +48,7 @@ const getUpdateFailure = function (data) {
 const getDeleteSuccess = function (data) {
   successMessage('success')
   $('#delete-Appointment').text('')
-  console.log('delete')
+
 }
 const getDeleteFailure = function (data) {
   failureMessage('Not Deleted')
@@ -66,27 +66,10 @@ const getSelectAppointments = function (data) {
 // const onClearAppointments = () => {
 //   $('#clear_Appointment').empty()
 //   setTimeout(function () {
-//     $('#clear_Appointment').text('')
-//   }, 3000)
 //   $('.CreateUpdate').text('Cleared')
 // }
 
-// const onGetAppointmentsSuccess = function (data) {
-//   $('#Appointments-history').html('')
 
-//   data.appointments.forEach(appointment => {
-//     const appointmentsHTML = (`
-//    <p>name:${appointment.name}</p>
-//    <p>trainer:${appointment.trainer}</p>
-//    <p>gym:${appointment.gym}</p>
-//    <p>location:${appointment.location}</p>
-//    <p>date:${appointment.starts_on}</p>
-//    <p>id:${appointment.id}</p>
-//    <br>
-//    `)
-//     $('#Appointments-history').append(appointmentsHTML)
-//   })
-// }
 
 const onGetAppointmentsSuccess = (data) => {
   console.log('get data is ', data)
@@ -94,22 +77,7 @@ const onGetAppointmentsSuccess = (data) => {
   $('#display_appointments').html(showAppointmentsHTML)
 }
 
-  // setTimeout(function () {
-  //   $('.CreateAlert').text('')
-  // }, 3000)
-  // if (showAppointments.append === '') {
-  //   $('.CreateAlert').text('Nothing to show')
-  // } else {
-  //   $('.CreateAlert').text('Successful')
-  // }
 
-// const clearAppointments = () => {
-//   $('.Show-Appointment').empty()
-// }
-//
-// const failure = (error) => {
-//   console.error(error)
-// }
 
 module.exports = {
   failureMessage,
@@ -123,8 +91,7 @@ module.exports = {
   getDeleteFailure,
   getSelectAppointments
 
-  // onClearAppointments,
-  // failure
+
 
 
 

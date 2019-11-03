@@ -16,13 +16,6 @@ const onCreateAppointments = function (event) {
     .catch(ui.getCreateFailure)
 }
 
-// const formData = getFormFields(event.target)
-// console.log(formData)
-// api.createAppointments(formData)
-//   .then(console.log)
-//   .then(ui.getCreateSuccess)
-//   .then(() => onGetAppointments(event))
-//   .catch(ui.getCreateFailure)
 
 const onGetAppointments = function (event) {
   event.preventDefault()
@@ -57,13 +50,6 @@ const onDeleteAppointments = (event) => {
     .catch(ui.getDeleteFailure)
 }
 
-
-// const form = event.target
-  // const formData = getFormFields(form)
-
-
-
-
 // const onSelectAppointments = (event) =>
 //   event.preventDefault()
 // const id = $('#slect').val()
@@ -76,17 +62,6 @@ const onClearAppointments = (event) => {
      event.preventDefault()
      ui.clearAppointments()
 }
-
-// const addHandlers = () => {
-//   $('#getAppointmentsButton').on('click', onGetAppointments)
-//   $('#getAppointmentButton').on('click', onGetAppointment)
-//   $('#getcreateAppointmentButton').on('click', onGetAppointments)
-//   // $('#clearAppointmentsButton').on('click', onClearAppointments)
-//   $('#deleteAppointmentsButton').on('click', onGetAppointments)
-//   $('#updateAppointmentsButton').on('click', onGetAppointments)
-//    // $('#selectAppointmentsButton').on('click', onGetAppointments)
-//   $('.content').on('click', '.delete-appointments', onDeleteAppointment)
-// }
 
 
 module.exports = {
